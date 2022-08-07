@@ -1,0 +1,259 @@
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400&family=Be+Vietnam+Pro:wght@400;500;700&family=Jost:wght@200;300;500&family=Montserrat:wght@300;400;500&family=Poppins:wght@200;300;400;500&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* root variables for the project */
+:root {
+  /* primary */
+  --Bright_Red: hsl(12, 88%, 59%);
+  --Dark_Blue: hsl(228, 39%, 23%);
+  --white: #fff;
+
+  /* Neutral */
+
+  --Dark_Grayish_Blue: hsl(227, 12%, 61%);
+  --Very_Dark_Blue: hsl(233, 12%, 13%);
+  --Very_Pale_Red: hsl(13, 100%, 96%);
+  --Vary_Light_Gray: hsl(0, 0%, 98%);
+
+  /* font size */
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+
+body {
+  height: 100%;
+  font-family: "Be Vietnam Pro";
+  background-color: var(--very-Light-Gray);
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* main container */
+.main-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ------------------------------------ */
+
+/* navbar */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0;
+  background-color: var(--Very_Pale_Red);
+}
+nav > img {
+  height: 100%;
+}
+nav > ul {
+  display: flex;
+
+  list-style: none;
+  align-items: center;
+}
+nav > ul > li > a {
+  padding: 0 30px;
+  text-decoration: none;
+  color: var(--Very_Dark_Blue);
+  font-weight: 500;
+  font-size: 1rem;
+}
+button {
+  border: none;
+  background-color: var(--Bright_Red);
+  color: var(--white);
+  padding: 5px 25px;
+  border-radius: 20px;
+}
+.hamburger {
+  display: none;
+  margin-right: 0;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: var(--Very_Dark_Blue);
+  border-radius: 20px;
+
+  /* tansitions for hamburger bars */
+  /* -webkit-transition: all 0.3s ease-in-out; */
+  transform: all 0.3 ease-in-out;
+}
+
+/* nav styles toggled from javascript */
+
+/* ------------------------------------ */
+
+/* navbar */
+
+/* ------------------------------------ */
+
+/* intropage */
+/* ------------------------------------ */
+
+/* intropage */
+
+/* responsive design */
+
+/* for mobile max-width :680px */
+@media screen and (max-width: 680px) {
+  .topmost {
+    display: none;
+  }
+
+  .hamburger {
+    position: fixed;
+    right: 0;
+    padding-right: 50px;
+    display: block;
+    z-index: 100;
+  }
+  .nav-links {
+    position: fixed;
+    left: -100%;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--Very_Pale_Red);
+    padding: 20px 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* adding the active part at the class */
+  .nav-links.active {
+    left: 0;
+    /* -webkit-transition: all 0.3s ease-in-out; */
+    transform: all 0.3 ease-in-out;
+  }
+
+  /* intropage */
+  .container {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .topic {
+    padding-top: 20px;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--Dark_Blue);
+  }
+  .paragraph {
+    padding: 20px 0;
+    font-size: 0.9rem;
+    color: var(--Dark_Grayish_Blue);
+  }
+  /* about page */
+  /* about detail */
+  .card {
+    margin-left: 100px;
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    background-color: var(--Very_Pale_Red);
+    margin-left: auto;
+    margin-right: 0;
+    border-radius: 30px;
+  }
+  .spacer {
+    padding: 0 10px;
+  }
+  .card-number {
+    background-color: var(--Bright_Red);
+    padding: 8px 25px;
+    border-radius: 30px;
+  }
+  .card-paragraph {
+    padding: 0 10px;
+    font-size: 0.9rem;
+    color: var(--Dark_Grayish_Blue);
+  }
+
+  /* about detail */
+
+  /* about page */
+}
