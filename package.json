@@ -9,5 +9,10 @@
   },
   "devDependencies": {
     "vite": "^2.9.9"
+  },
+  "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.1.2",
+    "@fortawesome/free-regular-svg-icons": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2"
   }
 }
