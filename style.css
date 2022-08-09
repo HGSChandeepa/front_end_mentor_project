@@ -107,7 +107,6 @@ nav {
   justify-content: space-around;
   align-items: center;
   padding: 15px 0;
-  background-color: var(--Very_Pale_Red);
 }
 nav > img {
   height: 100%;
@@ -129,8 +128,8 @@ button {
   border: none;
   background-color: var(--Bright_Red);
   color: var(--white);
-  padding: 5px 25px;
-  border-radius: 20px;
+  padding: 10px 45px;
+  border-radius: 40px;
 }
 .hamburger {
   display: none;
@@ -159,8 +158,141 @@ button {
 
 /* intropage */
 /* ------------------------------------ */
-
 /* intropage */
+.container {
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.intro-data {
+  padding: 30px;
+
+  text-align: left;
+}
+.topic {
+  padding-top: 20px;
+  text-align: left;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--Dark_Blue);
+}
+.paragraph {
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: var(--Dark_Grayish_Blue);
+}
+/* about page */
+.card {
+  margin-left: 100px;
+  margin: 40px 10px;
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  background-color: var(--Very_Pale_Red);
+  margin-left: auto;
+  margin-right: 0;
+  border-radius: 30px 0 0 30px;
+}
+.spacer {
+  padding: 0 10px;
+}
+.card-number {
+  background-color: var(--Bright_Red);
+  padding: 8px 25px;
+  border-radius: 30px 0 0 30px;
+}
+.card-paragraph {
+  padding: 0 10px;
+  font-size: 0.9rem;
+  color: var(--Dark_Grayish_Blue);
+}
+.about-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.about-left {
+  margin-top: 50px;
+  width: 50%;
+  text-align: left;
+}
+.about-right {
+  width: 50%;
+  text-align: right;
+}
+
+/* about page */
+/* intropage */
+/* testamonials with slider */
+.testa {
+  margin-top: 100px;
+}
+.slider {
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px 0;
+}
+.slider-img {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 10%;
+  z-index: 10;
+  border: 5px solid var(--Vary_Light_Gray);
+  border-radius: 50%;
+}
+.slider-details {
+  width: 100%;
+  background-color: var(--medium_Light_Gray);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.slide-name {
+  margin-top: 30px;
+}
+.slide.paragraph {
+  font-size: 1rem;
+  font-weight: lighter;
+}
+.arrow {
+  position: absolute;
+  z-index: 100;
+  width: 2%;
+  top: 66%;
+  color: var(--Bright_Red);
+}
+.right {
+  right: 5%;
+}
+.left {
+  left: 5%;
+}
+.testa-container {
+  position: relative;
+  padding: 0 30px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* testamonials with slider */
 
 /* responsive design */
 
@@ -168,18 +300,19 @@ button {
 .orange-section {
   background-color: var(--Bright_Red);
   width: 100%;
-  padding: 30px;
+  padding: 100px 30px;
   margin-top: 20px;
 }
 .footer-header {
   color: #fff;
 }
 .footer-btn {
-  margin-top: 20px;
+  margin-top: 60px;
   background-color: #fff;
   color: var(--Bright_Red);
   font-weight: 700;
   font-size: 0.9rem;
+  line-height: 2rem;
 }
 .blue-section {
   width: 100%;
@@ -189,14 +322,13 @@ button {
 .search-section {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  display: inline-block;
+  justify-content: space-evenly;
 }
 .search {
-  margin-top: 15px;
+  width: 60%;
+
   border: none;
-  padding: 7px 10px;
+  padding: 10px 10px;
   border-radius: 20px;
   font-size: 0.9rem;
 }
@@ -205,7 +337,7 @@ button {
   justify-content: space-around;
   text-align: left;
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 2rem;
   margin-top: 40px;
 }
@@ -213,20 +345,31 @@ button {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 30px;
-  width: 100%;
+  margin-top: 80px;
+  font-size: 400px;
 }
+
 .copyrignht {
-  margin-top: 30px;
+  margin-top: 70px;
   font-size: 0.7rem;
+  padding: 40px 0;
   font-weight: lighter;
   color: var(--medium_Light_Gray);
+  color: var(--medium_Light_Gray);
+  border-top: 1px solid var(--Dark_Grayish_Blue);
 }
 
 /* footer */
 
 /* for mobile max-width :680px */
 @media screen and (max-width: 980px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   .topmost {
     display: none;
   }
@@ -245,7 +388,6 @@ button {
     display: flex;
     flex-direction: column;
     text-align: center;
-
     background-color: var(--Very_Pale_Red);
     padding: 20px 0;
     width: 100%;
@@ -268,120 +410,34 @@ button {
     /* -webkit-transition: all 0.3s ease-in-out; */
     transform: all 0.3 ease-in-out;
   }
-
-  /* intropage */
-  .container {
-    padding: 0 30px;
+  .intro {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
   .topic {
-    padding-top: 20px;
+    font-size: 2rem;
     text-align: center;
-
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--Dark_Blue);
   }
   .paragraph {
-    padding: 20px 0;
-    font-size: 0.9rem;
-    color: var(--Dark_Grayish_Blue);
-  }
-  /* about page */
-  /* about detail */
-  .card {
-    margin-left: 100px;
-    margin: 40px 10px;
-    display: flex;
-    align-items: center;
-    max-width: 400px;
-    background-color: var(--Very_Pale_Red);
-    margin-left: auto;
-    margin-right: 0;
-    border-radius: 30px 0 0 30px;
-  }
-  .spacer {
-    padding: 0 10px;
-  }
-  .card-number {
-    background-color: var(--Bright_Red);
-    padding: 8px 25px;
-    border-radius: 30px 0 0 30px;
-  }
-  .card-paragraph {
-    padding: 0 10px;
-    font-size: 0.9rem;
-    color: var(--Dark_Grayish_Blue);
-  }
-
-  /* about detail */
-
-  /* about page */
-
-  /* testamonials */
-  /* slider */
-  .testa {
-    margin-top: 10px;
-  }
-  .slider {
-    position: relative;
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
     text-align: center;
-    padding: 40px 0;
   }
-  .slider-img {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 25%;
-    z-index: 10;
-    border: 5px solid var(--Vary_Light_Gray);
-    border-radius: 50%;
+  .intro-data {
+    text-align: center;
   }
-  .slider-details {
-    width: 100%;
-    background-color: var(--medium_Light_Gray);
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
-  .slide-name {
-    margin-top: 30px;
-  }
-  .slide.paragraph {
-    font-size: 0.7rem;
-    font-weight: lighter;
-  }
-  .arrow {
-    position: absolute;
-    z-index: 100;
-    width: 3%;
-    top: 58%;
-    color: var(--Bright_Red);
-  }
-  .right {
-    right: 5%;
-  }
-  .left {
-    left: 5%;
-  }
-  .testa-container {
-    position: relative;
-    padding: 0 30px;
-    margin: auto;
-    display: flex;
+  .about-wrapper {
     flex-direction: column;
+
     justify-content: center;
     align-items: center;
   }
-
-  /* slider */
-  /* testamonials */
+  .about-right {
+    width: 100%;
+    text-align: right;
+  }
+  .card {
+    text-align: right;
+  }
+  .slider-img {
+    width: 25%;
+  }
 }
